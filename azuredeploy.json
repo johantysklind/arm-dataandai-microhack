@@ -12,8 +12,7 @@
         },
         "storageAccountKey": {
             "type": "securestring",
-            "minLength": 1,
-            "defaultValue": "sp=rl&st=2021-03-11T23:29:56Z&se=2026-03-12T06:29:56Z&spr=https&sv=2020-02-10&sr=c&sig=D5jy97qh7LmF6GxHNcWAl5AcjcXK7BOxW5HxeQlU3BM%3D"
+            "minLength": 1
         },
         "location": {
             "type": "string",
@@ -28,7 +27,7 @@
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
-                    "uri": "./artifacts/sqldbdeploy.json",
+                    "uri": "https://raw.githubusercontent.com/johantysklind/arm-dataandai-microhack/master/artifacts/sqldbdeploy.json",
                     "contentVersion": "1.0.0.0"
                 },
                 "parameters": {
@@ -54,7 +53,7 @@
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
-                    "relativePath": "./artifacts/cosmosdeploy.json",
+                    "uri": "https://raw.githubusercontent.com/johantysklind/arm-dataandai-microhack/master/artifacts/cosmosdeploy.json",
                     "contentVersion": "1.0.0.0"
                 },
                 "parameters": {
