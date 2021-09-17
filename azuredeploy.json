@@ -65,7 +65,7 @@
         },
         {
             "apiVersion": "2017-05-10",
-            "name": "deploySQLDB",
+            "name": "deploySQLVM",
             "type": "Microsoft.Resources/deployments",
             "properties": {
                 "mode": "Incremental",
