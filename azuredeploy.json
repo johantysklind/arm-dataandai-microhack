@@ -62,6 +62,38 @@
                     }
                 }
             }
+        },
+        {
+            "apiVersion": "2017-05-10",
+            "name": "deploySQLDB",
+            "type": "Microsoft.Resources/deployments",
+            "properties": {
+                "mode": "Incremental",
+                "templateLink": {
+                    "uri": "https://raw.githubusercontent.com/johantysklind/arm-dataandai-microhack/master/artifacts/SQLVMdeploy.json",
+                    "contentVersion": "1.0.0.0"
+                },
+                "parameters": {
+                    "adminUsername": {
+                        "value": "[parameters('adminUser')]"
+                    },
+                    "adminPassword": {
+                        "value": "[parameters('adminPassword')]"
+                    },
+                    "sqlAuthenticationLogin": {
+                        "value": "[parameters('adminUser')]"
+                    },
+                    "sqlAuthenticationPassword": {
+                        "value": "[parameters('adminPassword')]"
+                    },
+                    "BackupStorageContainerSAS": {
+                        "value": "[concat('?', parameters('storageAccountKey'))]"
+                    },
+                    "location": {
+                        "value": "[parameters('location')]"
+                    }
+                }
+            }
         }
     ]
 }
