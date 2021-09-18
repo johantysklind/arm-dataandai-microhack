@@ -87,13 +87,43 @@
                         "value": "[parameters('adminPassword')]"
                     },
                     "BackupStorageContainerSAS": {
-                        "value": "[concat('?', parameters('storageAccountKey'))]"
+                        //"value": "[concat('?', parameters('storageAccountKey'))]"
+                         "value": "[parameters('storageAccountKey')]"
                     },
                     "location": {
                         "value": "[parameters('location')]"
                     }
                 }
             }
+        },
+    {
+      "apiVersion": "2017-05-10",
+      "name": "deployFileVM",
+      "type": "Microsoft.Resources/deployments",
+      "properties": {
+        "mode": "Incremental",
+        "templateLink": {
+          "uri": "https://openhackguides.blob.core.windows.net/mdw-templates-tmp/FileVMdeploy.json",
+          "contentVersion": "1.0.0.0"
+        },
+        "parameters": {
+          "adminUsername": {
+            "value": "[parameters('adminUser')]"
+          },
+          "adminPassword": {
+            "value": "[parameters('adminPassword')]"
+          },
+          "BackupStorageContainerSAS": {
+            "value": "[parameters('storageAccountKey')]"
+          },
+          "location": {
+            "value": "[parameters('location')]"
+          }
         }
+      },
+      "dependsOn": [
+        "deployCosmosLinkedTemplate"
+      ]
+    }
     ]
 }

@@ -52,7 +52,7 @@ if ($env:PATH -notcontains $InstallPath) {
 AzCopy.exe cp "https://$storageAccountName.blob.core.windows.net/$storageContainerName/$($storageContainerCsvFolder)?$containerSAS" "C:\" --recursive=true
 
 #echo "Moving $src to $dest"
-Move-Item $src $dest
+#Move-Item $src $dest
 
 # Subdirectories like "Transactions_2018," no matter what we might add or rename, are moved out to be a sibling of the destination directory
 # This leaves only the initial 2017 data in the directory, and prevents accidental recursive data movement in earlier challenges
