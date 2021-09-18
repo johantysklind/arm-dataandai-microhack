@@ -103,7 +103,7 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "https://openhackguides.blob.core.windows.net/mdw-templates-tmp/FileVMdeploy.json",
+          "uri": "https://raw.githubusercontent.com/johantysklind/arm-dataandai-microhack/master/artifacts/FileVMdeploy.json",
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
