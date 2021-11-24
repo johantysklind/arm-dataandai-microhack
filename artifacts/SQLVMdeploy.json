@@ -31,7 +31,7 @@
       },
       "DatabaseName": {
         "type": "string",
-        "defaultValue": "CoomReelDB"
+        "defaultValue": "ComReelDB"
       },
       "location": {
         "type": "string",
@@ -39,7 +39,7 @@
       },
       "namePrefix": {
         "type": "string",
-        "defaultValue": "CoomReelSQL"
+        "defaultValue": "ComReelSQL"
       }
     },
     "variables": {

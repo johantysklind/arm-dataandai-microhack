@@ -109,7 +109,7 @@ CreateCollection -DBName moviespot -CollectionName movies -PartitionKey "{""path
 $movies = Get-Content .\$catalogJsonFileName | ConvertFrom-JSON
 foreach($movie in $movies)
 {
-    CreateDocument -DBName southridge -CollectionName movies -Document $movie
+    CreateDocument -DBName moviespot -CollectionName movies -Document $movie
 }
 
 Remove-Item $catalogJsonFileName
